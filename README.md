@@ -1,3 +1,7 @@
+# This is a simple API Gateway that allows you to configure a Telegram webhook destination in a New Relic Workflow to send alerts to a Telegram channel or group.
+
+You must first create a Telegram Bot and add it to your channel/group as an admin: https://core.telegram.org/bots/tutorial
+
 Get chat id for group or channel. Must already have messages in group/channel or this returns empty array:  
 https://api.telegram.org/bot<BOT_API_KEY>/getUpdates  
 
