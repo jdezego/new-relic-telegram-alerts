@@ -6,13 +6,16 @@ const port = 3000
 
 app.use(express.json())
 
+//handle a post to the default route
 app.post("/", (req, res) => {
     const telegramBotAPIKey = req.body.telegramBotAPIKey
     const telegramChatID = req.body.telegramChatID
     const telegramMessage = req.body.telegramMessage
+    JSON.stringify()
     const telegramEndpoint = `https://api.telegram.org/bot${telegramBotAPIKey}/sendMessage?chat_id=${telegramChatID}&text=${telegramMessage}`
     res.end()
 
+    //post data to Telegram bot
     request(telegramEndpoint, (error, response) => {
         console.log(response.body)
     })
