@@ -7,7 +7,7 @@ const port = 3000
 app.use(express.json())
 
 //handle a post to the default route.
-//send JSON payload here and make sure the necessary Telegram fields are present, then build the final endpoint URL.
+//send New Relic alert JSON payload here and make sure the necessary Telegram fields are present, then build the final endpoint URL.
 //TODO: secure this! send api key/password in req
 app.post("/", (req, res) => {
     const telegramBotAPIKey = req.body.telegramBotAPIKey
