@@ -5,6 +5,7 @@ You must first create a Telegram Bot and add it to your channel/group as an admi
 - Create a Telegram channel or group
 - Add @BotFather to the channel/group and make it an admin
 - Follow instructions to create a new bot
+- Note bot API key
 
 Get chat id for group or channel. Must already have messages in group/channel or this returns empty array:  
 https://api.telegram.org/bot[BOT_API_KEY]/getUpdates  
