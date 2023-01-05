@@ -1,0 +1,23 @@
+//this is what a typical new relic alert payload looks like.
+//note the last 2 fields.
+//you update this payload in the NR workflow interface.
+
+{
+	"id": {{ json issueId }},
+	"issueUrl": {{ json issuePageUrl }},
+	"title": {{ json annotations.title.[0] }},
+	"priority": {{ json priority }},
+	"impactedEntities": {{json entitiesData.names}},
+	"totalIncidents": {{json totalIncidents}},
+	"state": {{ json state }},
+	"trigger": {{ json triggerEvent }},
+	"isCorrelated": {{ json isCorrelated }},
+	"createdAt": {{ createdAt }},
+	"updatedAt": {{ updatedAt }},
+	"sources": {{ json accumulations.source }},
+	"alertPolicyNames": {{ json accumulations.policyName }},
+	"alertConditionNames": {{ json accumulations.conditionName }},
+	"workflowName": {{ json workflowName }},
+    "telegramBotAPIKey":"<YOUR BOT API KEY>]",
+    "telegramChatID":"<YOUR CHAT ID>"
+}
