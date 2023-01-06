@@ -8,7 +8,8 @@ app.use(express.json())
 
 //handle a post to the default route.
 //send New Relic alert JSON payload here and make sure the necessary Telegram fields are present, then build the final endpoint URL.
-//TODO: secure this! send api key/password(?) in req
+//TODO: messages won't be sent to Telegram if the bot API key is not present, but maybe we should have another layer
+//of security here? we could check for a traditional auth header that contains a key or password and drop the connection on failure.
 app.post("/", (req, res) => {
     //these 2 must be created in the NR alert workflow payload via the UI and contain your actual api key and chat id
     const telegramBotAPIKey = req.body.telegramBotAPIKey
